@@ -10,7 +10,7 @@ public class main {
         int boardWidth = 600;
         int boardHeight = boardWidth;
 
-
+        //MAIN WINDOW
         JFrame window = new JFrame("Snake");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false);
@@ -26,7 +26,7 @@ public class main {
         //PAUSE MENU
         pauseMenu = new JWindow(window);
         pauseMenu.setSize(300, 300);
-        pauseMenu.setLocationRelativeTo(window);  // This will center the dialog
+        pauseMenu.setLocationRelativeTo(window);
 
         JLabel label = new JLabel("Game Paused", SwingConstants.CENTER);
         pauseMenu.add(label);
