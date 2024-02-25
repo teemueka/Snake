@@ -19,6 +19,7 @@ public class SnakeView extends JPanel implements ActionListener, KeyListener {
             this.y = y;
         }
     }
+    
     int boardWidth;
     int boardHeight;
     int tileSize = 25;
@@ -135,9 +136,11 @@ public class SnakeView extends JPanel implements ActionListener, KeyListener {
             }
         } while (isOccupied);
     }
+    
     public boolean collision(Tile tile1, Tile tile2) {
         return tile1.x == tile2.x && tile1.y == tile2.y;
     }
+    
     public void move() {
         //eat food
         if (collision(snakeHead, food)) {
@@ -174,6 +177,7 @@ public class SnakeView extends JPanel implements ActionListener, KeyListener {
             gameOver = true;
         }
     }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         move();
